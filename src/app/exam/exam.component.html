@@ -1,0 +1,47 @@
+<div  id="print-section">
+
+
+  <mat-grid-list cols="1" rowHeight="50px" class="border">
+    <mat-grid-tile  colspan="1" rowspan="1">{{appointmentDateTimeST}}
+    </mat-grid-tile>
+  </mat-grid-list>
+
+    <div role="listitem"  *ngFor="let item of dataSource; let i = index">
+
+    <mat-grid-list cols="1" rowHeight="30px" class="border">
+      <mat-grid-tile  colspan="1" rowspan="1">{{item.chechupTupe.name}}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-list role="list" class="border">
+      <mat-list-item role="listitem">{{item.patient.username}} {{item.patient.lastname}}</mat-list-item>
+      <mat-list-item role="listitem">{{item.appointmentDateTimeEd}}</mat-list-item>
+      <mat-list-item role="listitem">{{item.doctor.name}}</mat-list-item>
+      <mat-list-item role="listitem">{{item.note}}</mat-list-item>
+    </mat-list>
+
+    <mat-grid-list cols="1" rowHeight="30px">
+      <mat-grid-tile  colspan="1" rowspan="1">Prestazionl
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+    <mat-grid-list cols="8" rowHeight="150px">
+      <mat-grid-tile  colspan="1" rowspan="1">
+      </mat-grid-tile>
+      <mat-grid-tile  colspan="7" rowspan="1" class="border">
+        <mat-list role="list">
+          <li role="listitem" *ngFor="let exam of item.exams">{{exam.name}}</li>
+        </mat-list>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+  </div>
+
+</div>
+
+  <button
+      [printStyle]="{h1 : {'color': 'red'}, h2 : {'border': 'solid 1px'}}"
+      printSectionId="print-section"
+      ngxPrint>print</button>
