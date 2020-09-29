@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent
   ],
   imports: [
-    BrowserModule, NgxPrintModule, AppRoutingModule, BrowserAnimationsModule, MatGridListModule, MatListModule, NgbModule,
+    BrowserModule, NgxPrintModule, AppRoutingModule, BrowserAnimationsModule, MatGridListModule, MatListModule, NgbModule, MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
